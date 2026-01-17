@@ -1,0 +1,154 @@
+* {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+body {
+    background-image: url('./img/bg.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; width: 100vw;
+    margin:0;
+    padding: 0;
+}
+
+.top {
+    width: 93vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    color: whitesmoke;
+    padding: 1vh 2vw;
+}
+
+.top > * {
+    font-size: 2.5vw;
+}
+
+button {
+    border-radius: 10px 10px;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(240, 240, 240);
+    cursor: pointer;
+    flex-direction: column;
+    user-select: none;
+}
+
+button:hover {
+    animation: hovering 0.2s forwards;
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(2px);
+}
+
+
+div.main {
+    padding: 1vw 1vh;
+    border-radius: 10px;
+    width: 95vw;
+    height: 91vh;
+    background-color: rgba(0,0,0, 0.7);;
+    opacity: 1;
+    animation: body-appearance 0.5s forwards ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: whitesmoke;
+}
+
+div.main.primary {
+    z-index: 10;
+}
+
+.profile {
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.profile > img {
+    height: 80%;
+    width: auto;
+    border-radius: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+div.main.secondary {
+    z-index: 10;
+    display:none;
+}
+
+.main-text {
+    white-space: pre-line;;
+}
+
+.projects {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.8rem;
+}
+.projects > button {
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    display:flex;
+    margin: 0.1rem 0;
+}
+
+.projects > button > img {
+    height: 80%;
+    width: auto;
+    border-radius: 10px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hide {
+    display: none;
+}
+
+#last-updated {
+    z-index: 0;
+    font-style: italic;
+    font-size: 0.5rem;
+    color: whitesmoke;
+    display: block;
+    position: absolute;
+}
+
+@keyframes hovering {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes body-appearance {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 94vh;
+        opacity: 1;
+    }
+}

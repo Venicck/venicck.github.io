@@ -1,0 +1,113 @@
+<head>
+<meta charset="UTF-8">
+<title>ベニックのホームページ</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ベニック/ぽりとすのホームページです。自分とプロジェクトを紹介しています。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="./img/veni.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <button class="headbtn">トップ</button>
+    <button class="headbtn">アバター</button>
+    <button class="headbtn">プロジェクト</button>
+    <button class="headbtn">記事</button>
+</div>
+<div class="main primary" id="body-primary">
+    <div class="profile" style="background-color: rgb(58, 116, 137);">
+        <img src="./img/veni.png">
+        <div style="width: 10px;"></div>
+        <div class="vert", style="line-height: 1.5rem;">
+            <div class="name">ベニック / Venicck</div>
+            <div class="sns">
+                <button onclick='GoTo("https://youtube.com/c/venicck");'>YouTube</button>
+                <button onclick='GoTo("https://x.com/R_Venicck");'>Twitter (鍵)</button>
+                <button onclick='GoTo("https://github.com/Venicck");'>Github</button>
+            </div>
+        </div>
+        <div style="width: 10px;"></div>
+        
+    </div>
+    <div class="main-text">
+        高校では技術系の部活でこの通り名で活動していました。
+        公開しているプロジェクトはページ下部にあります。
+        現在は「ぽりとす」で大学での活動をしています。
+
+        小学生のいつかからパソコンを使い始めてかなりの年月を経ています。
+        名前を過去に何回も変えてます。 4回ぐらい。
+
+        誕生日:
+        - 12月 5日
+
+        デスクトップPCの性能:
+        - CPU: Ryzen 7 5700X
+        - GPU: RTX 3070 Ti
+        - RAM: 32GB
+        - ストレージ: 1TB NVMe SSD + 256GB NVMe SSD + 6TB HDD
+
+        ノートパソコン:
+        - Redmibook 14 2023 (i5-12500H, 16GB, 512GB)
+
+        趣味:
+        - プログラミング (Python, C言語, Web系, Unity)
+        - ゲーム ( Minecraft, Stardew Valley, Fortnite, BFV, ... 最近はやってません)
+        - 映像制作 (文字PV, ゲーム実況 とか)
+    </div>
+    <br>
+    <div class="projects">
+        ベニックが作成/貢献したプロジェクト。
+        <button onclick="GoTo('https://github.com/Venicck/Unilounge')">
+            <img src="./img/UniLounge.png"/>
+            <div style="width: 10px;"></div>
+            UniLounge
+        </button>
+        <button onclick="GoTo('https://youtube.com/playlist?list=PLqzVnNGNFxRF2CH7IfWHYX75vCTY4G-vs&si=vg0XNMKgzMu5dQhD')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"/>
+            <div style="width: 10px;"></div>
+            YouTube - 文字PV
+        </button>
+    </div>
+</div>
+<div class="main secondary hide" id="body-secondary">
+    <div class="profile" style="background-color: rgb(41, 134, 74);">
+        <img src="./img/poly.png">
+        <div style="width: 10px;"></div>
+        <div class="vert", style="line-height: 1.5rem;">
+            <div class="name">ぽりとす / Polythos</div>
+            <div class="sns">
+                <button onclick='GoTo("https://x.com/Polythos");'>Twitter</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="main-text">
+        中身はベニックですが、大学用での名前で活動しています。
+        UEC25生 I類 - 3クラ で活動しています。
+        学校推薦型選抜で入学したため、学力が全然足りないところがあります。
+        技術を配っていく代わりに勉強を教えていただけると嬉しいです。
+
+        名前の由来
+        自分の自作した3Dアバターの名前 と 最近食ってないお菓子 ドリトス から取ってます。
+        割と適当なんですよ。
+    </div>
+    <br>
+    <div class="projects">
+        ぽりとすが作成/貢献したプロジェクト。
+        <button onclick="GoTo('https://github.com/Venicck/PolyMom-Discord')">
+            <img src="./img/Polymom.png"/>
+            <div style="width: 10px;"></div>
+            ぽりママ DiscordBot
+        </button>
+        <button onclick="GoTo('https://youtube.com/playlist?list=PLqzVnNGNFxRHXjfv2whYf1IjRi4PlKHJQ&si=lRMUMYxpN5iNIWD5')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"/>
+            <div style="width: 10px;"></div>
+            LaTeX 再生リスト
+        </button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
