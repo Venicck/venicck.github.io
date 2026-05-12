@@ -1,12 +1,19 @@
+:root {
+    font-size: 18px;
+}
+
 * {
-    font-family: "M PLUS 1p", sans-serif;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 15px;
+}
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-image: url('./img/bg.png');
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,40 +22,74 @@ body {
     padding: 0;
 }
 
-.top {
-    width: 93vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow-y: hidden;
-    color: whitesmoke;
-    padding: 1vh 2vw;
-}
 
-.top > * {
-    font-size: 2.5vw;
+h1 {
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.25rem;
 }
 
 button {
-    border-radius: 10px 10px;
-    border-color: transparent;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(240, 240, 240);
-    cursor: pointer;
-    flex-direction: column;
-    user-select: none;
+        cursor: pointer;
+        border-radius: 0;
+        border: none;
+        padding : 8px 16px;
+        margin: 2px 0;
+        background-color: #042936;
+        color: white;
+        font-size: 1rem;
 }
-
-button:hover {
-    animation: hovering 0.2s forwards;
-}
-
 button:active {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(2px);
+    transform: scale(0.8);
+    transition: 0.1s all cubic-bezier(0,.02,0,1.01);
 }
 
+header {
+    width: 100vw;
+    height: 3em;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-y: hidden;
+    background-color: whitesmoke;
+}
+header > div {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+header > * {
+    font-size: 1.25rem;
+}
+header > .left {
+    margin: 1em;
+}
+
+header > .right {
+    justify-content: flex-end;
+    margin: 1em;
+}
+header > .right > a {
+    padding: 0.25em 0.5em;
+    border-radius: 10px;
+    margin: 0 0.5em;
+    color: #042936;
+    text-decoration: none;
+}
+header > .right > a:hover {
+    color: whitesmoke;
+    background-color: #042936;
+    transition: 0.2s all cubic-bezier(0,0,0,1);
+}
+
+.cover {
+    aspect-ratio: 3/1;
+    width: 100vw;
+}
 
 div.main {
     padding: 1vw 1vh;
@@ -89,7 +130,7 @@ div.main.secondary {
 }
 
 .main-text {
-    white-space: pre-line;;
+    white-space: pre-line;
 }
 
 .projects {

@@ -1,48 +1,47 @@
 <meta charset="UTF-8">
 <head>
-    <title>ベニック / ぽりとす</title>
+    <title>Polythos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>メンテナンス中です。基本リンク集。</h1>
-    <h2>ベニック - Venicck</h2>
-    <button onclick="to('https://youtube.com/c/@Venicck')">YouTube</button>
-    <button onclick="to('https://github.com/Venicck')">Github</button>
-    <button onclick="to('https://x.com/R_Venicck')">Twitter (Private)</button>
-    
-    <h2>ぽりとす - Polythos</h2>
-    <button onclick="to('https://www.youtube.com/playlist?list=PLqzVnNGNFxRHXjfv2whYf1IjRi4PlKHJQ')">LaTeX 構築/実践/Tips 再生リスト</button><br>
-    <button onclick="to('https://x.com/Polythos')">Twitter</button>
-    <button onclick="to('https://zenn.dev/polythos')">Zenn.dev</button>
-    <button onclick="to('https://note.com/polythos')">Note</button>
-    <button onclick="to('https://qiita.com/polythos')">Qiita</button>
+    <header>
+        <div class="left">
+            <div id="title">Polythos</div>
+        </div>
+        <div class="right">
+            <a href="./">Home</a>
+            <a href="#works">Works</a>
+            <a href="#posts">Posts</a>
+            <a href="#links">Links</a>
+        </div>
+    </header>
+    <div style="height:3em"></div>
+    <img src="./img/cover.png" alt="" class="cover">
 
     <br><br>
-    <h3>プロジェクト (New順)</h3>
+    <h1 id="works">Works</h1>
     <button onclick="to('https://github.com/Venicck/Polymom-Discord')">ぽりママ - Polythos</button><br>
-    <button onclick="to('https://github.com/Venicck/UniLounge')">UniLounge - Venicck</button><br>
-    <h3>記事 (New順)</h3>
+    <button onclick="to('https://www.youtube.com/playlist?list=PLqzVnNGNFxRHXjfv2whYf1IjRi4PlKHJQ')">LaTeX 構築/実践/Tips 再生リスト</button><br>
+    <button onclick="to('https://github.com/Venicck/UniLounge')">UniLounge - Venicck</button>
+    <br><br>
+
+    <h1 id="posts">Posts</h1>
     <button onclick="to('https://zenn.dev/polythos/articles/e424137272824a')">UEC統合認証が一瞬で終わるブラウザ拡張機能を作った - Zenn.dev</button><br>
     <button onclick="to('https://note.com/polythos/n/nb23aae3040f1')">インフルAに罹って欠席届を初めてつくった話 - Note</button>
-    
+    <br><br>
+
+    <h1 id="links">Links</h1>
+        <div class="link-container">
+        <button onclick="to('https://youtube.com/c/@Venicck')">YouTube</button>
+        <button onclick="to('https://github.com/Venicck')">Github</button>
+        <button onclick="to('https://x.com/R_Venicck')">Twitter (Private)</button>
+        <button onclick="to('https://x.com/Polythos')">Twitter</button>
+        <button onclick="to('https://zenn.dev/polythos')">Zenn.dev</button>
+        <button onclick="to('https://note.com/polythos')">Note</button>
+        <button onclick="to('https://qiita.com/polythos')">Qiita</button>
+    </div>
 </body>
-<style>
-    button {
-        cursor: pointer;
-        border-radius: 0;
-        border: none;
-        padding : 8px 16px;
-        margin: 2px 0;
-        background-color: #042936;
-        color: white;
-        font-size: 1rem;
-    }
-    button:active {
-        transform: scale(0.8);
-        transition: 0.1s all cubic-bezier(0,.02,0,1.01);
-    }
-</style>
-<script>
-    function to(url) {
-        window.open(url, "_blank");
-    }
-</script>
+<script src="script.js"></script>
