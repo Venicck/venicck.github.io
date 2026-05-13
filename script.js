@@ -36,8 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ).then (
         json => {
             json.items.forEach(article => {
+                if (article.enclosure.link === "") {
+                    article.enclosure.link = "./img/noimg.png";
+                }
                 articles.push({
-                    title: article.title,
+                    title: article.title + " - Zenn",
                     thumbnail: article.enclosure.link,
                     url: article.link,
                     date: article.pubDate.split('T')[0]
@@ -62,8 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         json => {
             console.log(json);
             json.items.forEach(content => {
+                if (content.thumbnail === "") {
+                    content.thumbnail = "./img/noimg.png";
+                }
                 articles.push({
-                    title: content.title,
+                    title: content.title + " - Note",
                     thumbnail: content.thumbnail,
                     url: content.link,
                     date: content.pubDate.split('T')[0]
