@@ -92,8 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ).then (
         json => {
             footer_base = '&copy; ' + json.updated_at.split('T')[0] + ' Polythos ';
+            if (document.location.hostname == "127.0.0.1" || document.location.hostname == "localhost") elem.innerHTML = footer_base + " | Localhost";
         }
     );
+    if (document.location.hostname == "127.0.0.1" || document.location.hostname == "localhost") return;
     fetch(GAS_WEBAPP_URL)
         .then(response => {
             if (!response.ok) throw new Error("ネットワークエラー");
@@ -102,12 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             let daily = data.dailyCount || 0;
             let total = data.totalCount || 0;
-            console.log(daily);
-            console.log(total);
             elem.innerHTML = footer_base + " | Today: " + daily + " views | Total: " + total + " views";
         })
         .catch(error => {
             console.error('取得失敗:', error);
-            elem.innerHTML = footer_base + " | Failed to get view counts";
+            elem.innerHTML = footer_base + " | Today: N/A views | Total: N/A views";
         });
 });

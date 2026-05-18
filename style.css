@@ -35,6 +35,10 @@ h2 {
     font-size: 1.25rem;
 }
 
+img {
+    pointer-events: none;
+}
+
 button {
         cursor: pointer;
         border-radius: 0;
