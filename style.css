@@ -125,7 +125,7 @@ content > .cover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #d2d2d2;
     border-radius: 20px;
 }
@@ -142,7 +142,6 @@ content > .cover {
     align-items: center;
     justify-content: center;
     white-space: pre-wrap;
-    flex:1;
 }
 
 /* SNS リスト */
@@ -291,7 +290,7 @@ content > .cover {
     height: fit-content;
     width: 95vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 1em;
@@ -325,11 +324,11 @@ content > .cover {
     text-decoration: none;
 }
 .link-container > .item:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     transition: all 0.3s cubic-bezier(0,0,0,1);
 }
 .link-container > .item:active {
-    transform: scale(0.97);
+    transform: scale(0.99);
     transition: all 0.1s cubic-bezier(0,0,0,1);
 }
 
