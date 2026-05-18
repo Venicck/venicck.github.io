@@ -289,8 +289,8 @@ content > .cover {
 .link-container {
     height: fit-content;
     width: 95vw;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: flex-start;
     gap: 1em;
@@ -302,21 +302,20 @@ content > .cover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 95vw;
-    height: 5em;
     gap: .5em;
-    border-radius: 20px;
-    text-decoration: none;
     border-radius: 10px;
+    text-decoration: none;
     border: solid 2px #d2d2d2;
 }
 
 .link-container > .item > img {
-    height:100%;
+    width: 4.5em;
+    height: 4.5em;
+    flex: 0 0 4.5em;
     object-fit: cover;
-    aspect-ratio: 1/1;
     border-top-left-radius: 9px;
     border-bottom-left-radius: 9px;
+    display: block;
 }
 .link-container > .item > .title {
     flex: 1;
