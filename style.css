@@ -34,21 +34,24 @@ h1 {
 h2 {
     font-size: 1.25rem;
 }
+h3 {
+    font-size: 0.75rem;
+}
 
 img {
     pointer-events: none;
 }
 
 button {
-        cursor: pointer;
-        border-radius: 0;
-        border: none;
-        padding : 8px 16px;
-        margin: 2px 0;
-        background-color: #042936;
-        border-radius: 10px;
-        color: white;
-        font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0;
+    border: none;
+    padding : 8px 16px;
+    margin: 2px 0;
+    background-color: #042936;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
 }
 button:hover {
     scale: 1.03;
@@ -139,6 +142,7 @@ content > .cover {
     align-items: center;
     justify-content: center;
     white-space: pre-wrap;
+    flex:1;
 }
 
 /* SNS リスト */
@@ -236,7 +240,7 @@ content > .cover {
 
 
 .post-container {
-    min-height: 10em;
+    min-height: 11em;
     width: 95vw;
     display: flex;
     flex-direction: row;
@@ -255,7 +259,7 @@ content > .cover {
     align-items: center;
     justify-content: flex-start;
     width: 15em;
-    height: 100%;
+    height: 10em;
     gap: .5em;
     border-radius: 20px;
     text-decoration: none;
@@ -279,6 +283,52 @@ content > .cover {
     transition: all 0.3s cubic-bezier(0,0,0,1);
 }
 .post-container > .item:active {
+    transform: scale(0.97);
+    transition: all 0.1s cubic-bezier(0,0,0,1);
+}
+
+.link-container {
+    height: fit-content;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    padding: 0.5em 0;
+}
+
+.link-container > .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+    height: 5em;
+    gap: .5em;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: solid 2px #d2d2d2;
+}
+
+.link-container > .item > img {
+    height:100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.link-container > .item > .title {
+    flex: 1;
+    padding: 0 0.2em;
+    text-decoration: none;
+}
+.link-container > .item:hover {
+    transform: scale(1.03);
+    transition: all 0.3s cubic-bezier(0,0,0,1);
+}
+.link-container > .item:active {
     transform: scale(0.97);
     transition: all 0.1s cubic-bezier(0,0,0,1);
 }
