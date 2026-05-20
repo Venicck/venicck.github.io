@@ -189,7 +189,7 @@ content > .cover {
 }
 
 .work-container {
-    min-height: 10em;
+    min-height: 11em;
     width: 95vw;
     display: flex;
     flex-direction: row;
@@ -208,7 +208,7 @@ content > .cover {
     align-items: center;
     justify-content: flex-start;
     width: 15em;
-    height: 100%;
+    height: 10em;
     gap: .5em;
     border-radius: 20px;
     text-decoration: none;
