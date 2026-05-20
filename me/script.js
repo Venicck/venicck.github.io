@@ -1,8 +1,4 @@
 const site_project = 'https://api.github.com/repos/Venicck/venicck.github.io';
-const zenn_articles = "https://api.rss2json.com/v1/api.json?rss_url=https://zenn.dev/polythos/feed";
-const note_articles = "https://api.rss2json.com/v1/api.json?rss_url=https://note.com/polythos/rss";
-const qiita_articles = null;
-let loaded_article_sites = 0;
 let footer_base = "";
 
 const article_baseHTML = `<a href="{url}" class="item" target="_blank" rel="noopener noreferrer">
@@ -31,62 +27,6 @@ let articles = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     const elem = document.querySelector(".footer-content > p");
-    fetch(zenn_articles).then(
-        data => data.json()
-    ).then (
-        json => {
-            json.items.forEach(article => {
-                if (article.enclosure.link === "") {
-                    article.enclosure.link = "./img/noimg.png";
-                }
-                articles.push({
-                    title: article.title + " - Zenn",
-                    thumbnail: article.enclosure.link,
-                    url: article.link,
-                    date: article.pubDate.split('T')[0]
-                });
-            });
-            loaded_article_sites++;
-            if (loaded_article_sites === 2) {
-                genArticles();
-            }
-        }
-    ).catch(error => {
-        console.error('Zennの記事の取得に失敗:', error);
-        loaded_article_sites++;
-        if (loaded_article_sites === 2) {
-            genArticles();
-        }
-    });
-
-    fetch(note_articles).then(
-        data => data.json()
-    ).then (
-        json => {
-            console.log(json);
-            json.items.forEach(content => {
-                if (content.thumbnail === "") {
-                    content.thumbnail = "./img/noimg.png";
-                }
-                articles.push({
-                    title: content.title + " - Note",
-                    thumbnail: content.thumbnail,
-                    url: content.link,
-                    date: content.pubDate.split('T')[0]
-                });
-            });
-            loaded_article_sites++;
-            if (loaded_article_sites === 2) {
-                genArticles();
-            }
-        }
-    ).catch(error => {
-        console.error('Noteの記事の取得に失敗:', error);
-        loaded_article_sites++;
-        if (loaded_article_sites === 2) {
-            genArticles();
-        }
-    });
     fetch(site_project).then(
         data => data.json()
     ).then (
