@@ -18,8 +18,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh; width: 100vw;
-    margin:0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
     padding: 0;
 }
 
@@ -63,7 +64,7 @@ button:active {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 3em;
     position: fixed;
     display: flex;
@@ -105,7 +106,8 @@ header > .right > a:hover {
     transition: 0.2s all cubic-bezier(0,0,0,1);
 }
 content {
-    width:100%;
+    width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,11 +118,11 @@ content {
 
 content > .cover {
     aspect-ratio: 3/1;
-    width: 100vw;
+    width: 100%;
 }
 
 .intro {
-    width: 95vw;
+    width: 95%;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -140,19 +142,20 @@ content > .cover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;#42445A
+    justify-content: center;
 }
 
 /* SNS リスト */
 .sns {
-    max-width: 95vw;
+    width: 95%;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    justify-content: space-around;
+    justify-content: center;
     gap: .5em;
     margin: 1em;
+    flex-wrap: wrap;
     list-style-type: none !important;
 }
 
@@ -170,6 +173,7 @@ content > .cover {
     color: #000000;
     border: solid 2px #d2d2d2;
     text-decoration: none;
+    text-wrap: nowrap;
 }
 .sns > a > img {
     width: 80%;
@@ -189,8 +193,8 @@ content > .cover {
 }
 
 .work-container {
-    min-height: 11em;
-    width: 95vw;
+    min-height: 13em;
+    width: 95%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -208,7 +212,7 @@ content > .cover {
     align-items: center;
     justify-content: flex-start;
     width: 15em;
-    height: 10em;
+    height: 12em;
     gap: .5em;
     border-radius: 20px;
     text-decoration: none;
@@ -238,8 +242,8 @@ content > .cover {
 
 
 .post-container {
-    min-height: 11em;
-    width: 95vw;
+    min-height: 13em;
+    width: 95%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -257,7 +261,7 @@ content > .cover {
     align-items: center;
     justify-content: flex-start;
     width: 15em;
-    height: 10em;
+    height: 12em;
     gap: .5em;
     border-radius: 20px;
     text-decoration: none;
@@ -287,7 +291,7 @@ content > .cover {
 
 .link-container {
     height: fit-content;
-    width: 95vw;
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -333,7 +337,7 @@ content > .cover {
 footer {
     margin:0;
     padding:0;
-    width: 100vw;
+    width: 100%;
     height: 2.5em;
     display: flex;
     flex-direction: row;
