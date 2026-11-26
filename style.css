@@ -213,6 +213,7 @@ content > .cover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    flex-shrink: 0;
     width: 15em;
     height: 12em;
     gap: .5em;
@@ -272,6 +273,7 @@ content > .cover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    flex-shrink: 0;
     width: 15em;
     height: 12em;
     gap: .5em;
@@ -410,6 +412,6 @@ footer {
     }
     .work-container > .item,
     .post-container > .item {
-        width: 12em;
+        width: 13em;
     }
 }
